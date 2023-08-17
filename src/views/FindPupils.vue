@@ -61,7 +61,7 @@ import fireImg from '@/assets/img/findpupil-img/fire.svg'
         budgetNew1: '',
         budgetNew2: '', 
         checkBoxNew: '',
-        checked: false, 
+        checked: false,
         showTitle: "Показать только срочные задания"
       }
     },
@@ -118,12 +118,19 @@ import fireImg from '@/assets/img/findpupil-img/fire.svg'
         this.budgetNew2 = value
       },
       checkBoxItem(value){
-        this.checkBoxNew = value
-        this.checkArray.push(value)
+        if (!this.checkArray.includes(value)) {
+          this.checkArray.push(value);
+        } 
+        else {
+          const index = this.checkArray.indexOf(value);
+          if (index !== -1) {
+            this.checkArray.splice(index, 1);
+          }
+        } 
       },
       clickCheckForOne() {
         this.checksItems.forEach(item => {
-          item.checked = true;  
+          item.checked = true;
         });
       }, 
       clickFire(kolvo){

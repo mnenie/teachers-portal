@@ -65,6 +65,10 @@ import CheckFind from '@/components/UI/CheckFind.vue'
       showTitle: {
         type: String,
         required: true,
+      }, 
+      checked: {
+        type: Boolean,
+        required: true,
       }
     },
     data(){
