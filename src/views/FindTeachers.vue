@@ -128,7 +128,7 @@ import img4 from "@/assets/img/mainpage-img/4cir.png"
           if (index !== -1) {
             this.checkArray.splice(index, 1);
           }
-        } 
+        }
       },
       clickCheckForOne() {
         this.checksItems.forEach(item => {
